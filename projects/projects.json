@@ -15,7 +15,7 @@
     "image": "image",
     "category": "basicweb",
     "links": {
-      "view": ".projects/Omnifood.html",
+      "view": "./projects/Omnifood.html",
       "code": "https://portfolio-mainweb.netlify.app/"
     }
   },
