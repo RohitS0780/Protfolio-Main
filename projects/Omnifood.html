@@ -1,9 +1,500 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    .nav {
+      background-color: #f5b883;
+    }
+
+    .b {
+      background-color: #cf711f;
+    }
+
+    .b:hover {
+      background-color: #ad5304;
+    }
+
+    .b1 {
+      background-color: #eb8226;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: bolder;
+      margin: 2%;
+      color: black;
+    }
+
+    .nav button {
+      height: 50px;
+    }
+
+    .delivered-meals {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      margin-top: 8rem;
+    }
+
+    .delivered-imgs {
+      display: flex;
+    }
+
+    .delivered-imgs img {
+      height: 4.0rem;
+      width: 4.0rem;
+      border-radius: 50%;
+      margin-right: -1.6rem;
+      border: 3px solid #fdf2e9;
+    }
+
+    .delivered-imgs img:last-child {
+      margin: 0;
+    }
+
+    .delivered-text {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .delivered-text span {
+      color: #cf711f;
+      font-weight: 700;
+    }
+
+
+
+    .pricing-plan--complete::after {
+      content: "Best value";
+      position: absolute;
+      top: 7%;
+      right: -2%;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      color: #333;
+      background-color: #ffd43b;
+      padding: 8px 40px;
+      transform: rotate(45deg);
+    }
+
+    .meals {
+      height: 440px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.6rem;
+      padding: 1.6rem;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      transition: all 0.4s;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm fw-bolder" style="background-color: #f5b883;">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/Omnifood Images/omnifood-logo.png" alt="Logo" width="30%" height="100%" />
+        <button class="navbar-toggler ms-auto  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </a>
+      <!-- Menu Items -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav align-items-end ">
+          <li class="nav-item px-1 " style="width: 150px;"><a class="nav-link active" href="#">How its Works</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#">Meals</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#">Testimonias</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item px-3"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item px-1" style="width: 102px;"><a
+              class="btn btn-outline-warning btn-block  btn--full fw-bolder text-white b" href="#">Try Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid ">
+
+    <div class="row nav">
+      <div class="col-sm  p-5">
+        <h1 style="font-size: 55px; font-weight: bolder;">A healthy meal <br> delivered to your door, <br>every single
+          day</h1>
+        <p class=" fs-5 mt-5">
+          The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal
+          tastes and nutritional needs.
+        </p>
+
+        <a class="btn btn--full fs-5 text-white b">Starting Eating Well</a>
+        <a class="btn btn--outline fs-5 bg-white text-dark ">Learn More ↓</a>
+
+        <div class="delivered-meals ">
+          <div class="delivered-imgs">
+            <img src="assets/Omnifood Images/customers/customer-1.jpg">
+            <img src="assets/Omnifood Images/customers/customer-2.jpg">
+            <img src="assets/Omnifood Images/customers/customer-3.jpg">
+            <img src="assets/Omnifood Images/customers/customer-4.jpg">
+            <img src="assets/Omnifood Images/customers/customer-5.jpg">
+            <img src="assets/Omnifood Images/customers/customer-6.jpg">
+
+          </div>
+          <div class=" delivered-text ">
+            <h4><span>25000000+</span> Meals Delivered Last Year</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm mt-5 ">
+        <img class="mx-5 mb-3" src="assets/Omnifood Images/hero.png" width="80%">
+      </div>
+    </div>
+    <div class="container mt-5 ">
+      <p class="text-center mt-2">Lorem ipsum dolor sit amet.</p>
+      <div class="row  mt-3  fs-2 ">
+        <div class="col text-center"><img src="assets/Omnifood Images/logos/techcrunch.png" width="70%"></div>
+        <div class="col text-center"><img src="assets/Omnifood Images/logos/business-insider.png" width="50%"></div>
+        <div class="col text-center"><img src="assets/Omnifood Images/logos/the-new-york-times.png" width="70%"></div>
+        <div class="col text-center"><img src="assets/Omnifood Images/logos/forbes.png" width="60%"></div>
+        <div class="col text-center"><img src="assets/Omnifood Images/logos/usa-today.png" width="60%"></div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <p>How Dose Its Works</p>
+      <h1>Lorem ipsum dolor sit, amet elit.3 Recusandae, aperiam?</h1>
+      <div class="row  mt-5">
+        <div class="col-sm mt-5">
+          <h1 class="display-1 fw-bolder text-secondary">01</h1>
+          <h3>Teel Us What Do You Like(Or What Not)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!</p>
+        </div>
+        <div class="col-sm text-center">
+          <img src="assets/Omnifood Images/app/app-screen-1.png" width="30%" height="100%">
+        </div>
+      </div>
+      <div class="row flex-lg-row flex-column-reverse ">
+        <div class="col-sm text-center ">
+          <img src="assets/Omnifood Images/app/app-screen-2.png" width="30%" height="100%">
+        </div>
+        <div class=" col-sm mt-5 ">
+          <h1 class=" display-1 fw-bolder text-secondary">02</h1>
+          <h3>Teel Us What Do You Like(Or What Not)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!</p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-sm mt-5">
+          <h1 class="display-1 fw-bolder text-secondary">03</h1>
+          <h3>Teel Us What Do You Like(Or What Not)</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Expedita accusamus molestias, magni ipsa
+            doloremque asperiores deserunt voluptates commodi ab aliquid!</p>
+        </div>
+        <div class="col-sm text-center">
+          <img src="assets/Omnifood Images/app/app-screen-3.png" width="30%" height="100%">
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 ">
+      <div class="row  p-4 m-5">
+        <p class="text-center">Meals</p>
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
+        <div class="col-sm card m-2 p-0 m-3">
+          <img class=" d-inline rounded" src="assets/Omnifood Images/meals/meal-1.jpg" width="100%">
+          <div class="card-body">
+            <span class="badge bg-success text-dark">Vegitarian</span>
+            <h2 class="card-title">Lorem ipsum</h2>
+            <p class="px-5 mt-4">🔥 650 calaries</p>
+            <p class="px-5">🍽️ Nutriscrore ®️ 74</p>
+            <p class="px-5">⭐ 4.9 Rating(650)</p>
+          </div>
+        </div>
+        <div class="col-sm card m-2 p-0  m-3">
+          <img class="rounded" src="assets/Omnifood Images/meals/meal-2.jpg" width="100%">
+          <div class="card-body">
+            <span class="badge bg-success text-dark">Vegean</span>
+            <span class="badge b text-dark">Polav</span>
+            <h2 class="card-title">Lorem ipsum</h2>
+            <p class="px-5 mt-4">🔥 650 calaries</p>
+            <p class="px-5">🍽️ Nutriscrore ®️ 74</p>
+            <p class="px-5">⭐ 4.9 Rating(650)</p>
+          </div>
+        </div>
+        <div class="col-sm m-2  m-3">
+          <h1>Work with Diet:</h1>
+          <p class="mt-5 px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+          <p class=" px-5"> ✔️ vegan</p>
+        </div>
+        <button class="btn border-0 text-warning mt-5 "><u>See All Reciept →</u></button>
+      </div>
+    </div>
+    <div class="row nav">
+      <div class="col-sm p-5">
+        <P class="text-danger mt-3 mx-3">TESTIMONIAS</P>
+        <h1 class="mx-3 lh-1">Once you try it,can't go back</h1>
+        <div class="row">
+          <div class="col-sm p-5">
+            <img class="rounded-pill" src="assets/Omnifood Images/customers/ben.jpg" width="20%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum ipsam deserunt modi soluta,
+              reprehenderit quaerat labore necessitatibus minus aspernatur sunt quasi dolor odit
+              incidunt quas vel at?</p>
+            <p class="blockquote-footer">Rohit Sirsat</p>
+          </div>
+          <div class="col-sm p-5">
+            <img class="rounded-pill" src="assets/Omnifood Images/customers/steve.jpg" width="20%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum ipsam deserunt modi soluta,
+              reprehenderit quaerat labore necessitatibus minus aspernatur sunt quasi dolor odit
+              incidunt quas vel at?</p>
+            <p class="blockquote-footer">Rohit Sirsat</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm p-5">
+            <img class="rounded-pill" src="assets/Omnifood Images/customers/hannah.jpg" width="20%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum ipsam deserunt modi soluta,
+              reprehenderit quaerat labore necessitatibus minus aspernatur sunt quasi dolor odit
+              incidunt quas vel at?</p>
+            <p class="blockquote-footer">Rohit Sirsat</p>
+          </div>
+          <div class="col-sm p-5">
+            <img class="rounded-pill" src="assets/Omnifood Images/customers/dave.jpg" width="20%">
+            <p class="blockquote fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur illum ipsam
+              deserunt modi soluta,
+              reprehenderit quaerat labore necessitatibus minus aspernatur sunt quasi dolor odit
+              incidunt quas vel at?</p>
+            <p class="blockquote-footer">Rohit Sirsat</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm  gallery ">
+
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-1.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-2.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-3.jpg" width="100%">
+        </div>
+
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-4.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-5.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-6.jpg" width="100%">
+        </div>
+
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-7.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-8.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-9.jpg" width="100%">
+        </div>
+
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-10.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-11.jpg" width="100%">
+        </div>
+        <div class="col gallery-item"><img class="rounded" src="assets/Omnifood Images/gallery/gallery-12.jpg" width="100%">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <p style="color: #cf711f;">Pricing</p>
+      <h2>Eating well Without Breaking A Bank</h2>
+      <div class="row mt-5">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm text-center">
+            <h4 class="my-4 fw-normal" style="color: #cf711f;">STARTER</h4>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><small class="text-muted fs-3">$</small>199</h1>
+              <p class="card-title pricing-card-title text-secondary">per month. That just $13 per meals</p>
+              <ul type="none" class="mb-4 mt-3 text-start text-muted ">
+                <li class="m-4">✔️ 1 meals per a day</li>
+                <li class="m-4">✔️ Orders From 11am to 9pm</li>
+                <li class="m-4">✔️ Delivary is Free</li>
+                <li class="m-4">✔️ Delivary is Free of cost</li>
+              </ul>
+              <button class="btn btn-lg btn-block b fw-bolder text-white">Start Eating Well</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="card mb-4 shadow-sm text-center" style="background-color: #f7e4d2;">
+            <h4 class="my-4 fw-normal" style="color: #cf711f;">COMPLETED</h4>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"><small class="text-muted fs-3">$</small>599</h1>
+              <p class="card-title pricing-card-title text-secondary">per month. That just $13 per meals</p>
+              <ul type="none" class="mb-4 mt-3 text-start text-muted ">
+                <li class="m-4">✔️ 2 meals per a day</li>
+                <li class="m-4">✔️ Orders From 24/7</li>
+                <li class="m-4">✔️ Delivary is Free</li>
+                <li class="m-4">✔️ Get assces of letest recipes</li>
+              </ul>
+              <button class="btn btn-lg btn-block  b fw-bolder text-white">Start Eating Well</button>
+            </div>
+          </div>
+        </div>
+        <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, animi!</p>
+      </div>
+    </div>
+
+    <div class="row text-start p-5">
+      <div class="col-sm mx-2">
+        <img src="img/rohit.jpeg" width="50" height="50" class="rounded-circle">
+        <h3 class="mt-3">Never Cook Again!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur elit. Velit earum error itaque molestias adipisci
+          ipsam.</p>
+      </div>
+      <div class="col-sm mx-2">
+        <img src="img/rohit.jpeg" width="50" height="50" class="rounded-circle">
+        <h3 class="mt-3">Never Cook Again!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur elit. Velit earum error itaque molestias adipisci
+          ipsam.</p>
+      </div>
+      <div class="col-sm mx-2">
+        <img src="img/rohit.jpeg" width="50" height="50" class="rounded-circle">
+        <h3 class="mt-3">Never Cook Again!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur elit. Velit earum error itaque molestias adipisci
+          ipsam.</p>
+      </div>
+      <div class="col-sm mx-2">
+        <img src="img/rohit.jpeg" width="50" height="50" class="rounded-circle">
+        <h3 class="mt-3">Never Cook Again!</h3>
+        <p>Lorem ipsum dolor sit amet consectetur elit. Velit earum error itaque molestias adipisci
+          ipsam.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row b1  rounded ">
+      <div class="col-sm-8 mt-5 px-5">
+        <h1 class="fw-bolder display-5 mt-4">Get Your First Meals Free</h1>
+        <p class="fs-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa facere asperiores possimus
+          atque, libero
+          is voluptas molestias consectetur, adipisicing elit. Culpa facere asperiores
+          possimus atque, libero
+          ratione deserunt perspiciatis voluptas molestias ad.</p>
+        <div class="row mt-5">
+          <div class="col">
+            <label for="name" class="fw-bolder p-2">Full Name</label><br>
+            <input class="form-control" type="text " placeholder="Rohit Sirsat">
+          </div>
+          <div class="col">
+            <label for="email" class="fw-bolder p-2">Email Address</label><br>
+            <input class="form-control" type="email" placeholder="rohit@gmail.com">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mt-4 ">
+            <label for="fb" class="fw-bolder p-2">Where did you hear from us?</label><br>
+            <select class="mt-3  form-select">
+              <option>Exelent</option>
+              <option>Good</option>
+              <option>Better</option>
+              <option>best</option>
+              <option>poor</option>
+            </select>
+          </div>
+          <div class="col-sm fw-bolder mt-4">
+            <h1 style="color: #eb8226;">.</h1>
+            <a class="btn btn--outline bg-dark text-white form-control mb-3">Sign up Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 p-0 m-0 ">
+        <img src="assets/Omnifood Images/eating.jpg" class="rounded-end" width="100%">
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <h2 class="text-start px-3">
+          <img src="assets/Omnifood Images/omnifood-logo.png" width="40%">
+        </h2>
+        <i class="bi bi-instagram px-3 fs-4"></i>
+        <i class="bi bi-facebook px-3 fs-4"></i>
+        <i class="bi bi-twitter px-3 fs-4"></i>
+        <p class="mt-5 p-4">copyright &copy; 2027 by omnifood, inc. All right reserved</p>
+      </div>
+      <div class="col-sm-3 mt-2 p-4">
+        <h3>Contact Us</h3>
+        <p> 623 Harrison St.2nd floore san Farnccisos, CA 93525</p>
+        <p class="mt-5">859702-3283-4733-8433
+          <a href="">hello@omnofoood.com</a></>
+      </div>
+      <div class="col-sm-2 mt-2 p-4 ">
+        <h2>Account</h2>
+        <a href="" class="btn text-decoration-none text-dark">Create Account</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Sign In</a><br>
+        <a href="" class="btn text-decoration-none text-dark">ISO App</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Android App</a><br>
+      </div>
+      <div class="col-sm-2 mt-2 p-4">
+        <h2>Company</h2>
+        <a href="" class="btn text-decoration-none text-dark">Create Account</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Sign In</a><br>
+        <a href="" class="btn text-decoration-none text-dark">ISO App</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Android App</a><br>
+      </div>
+      <div class="col-sm-2 mt-2 p-4">
+        <h2>Resourse</h2>
+        <a href="" class="btn text-decoration-none text-dark">Create Account</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Sign In</a><br>
+        <a href="" class="btn text-decoration-none text-dark">ISO App</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Android App</a><br>
+        <a href="" class="btn text-decoration-none text-dark">Android App</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
 </html>
