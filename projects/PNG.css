@@ -1,0 +1,177 @@
+/* New Arrivals */
+.arrivals {
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.arrivals:hover {
+  transform: translateY(-8px);
+}
+
+/* Shop By Occasion */
+.shop {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+.shop-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.shop-item img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.shop-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Button Overlay */
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.b {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.b:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Card Slider */
+.card-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card-slider-inner {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.card-slider-inner:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  width: 220px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 70%;
+  margin: auto;
+}
+
+/* Slider Animation */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Newsletter Section */
+.form {
+  background: linear-gradient(135deg, #efd279, #a169de);
+  padding: 50px 20px;
+}
+
+.form h1 {
+  font-weight: 700;
+}
+
+.form input {
+  border-radius: 25px 0 0 25px;
+  padding: 12px 20px;
+}
+
+.form button {
+  border-radius: 0 25px 25px 0;
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shop {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 180px;
+  }
+
+  .button button {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+.dropdown-menu {
+  border-radius: 15px;
+  border: none;
+}
+
+.dropdown-menu h6 {
+  font-weight: bold;
+  color: #59016b;
+}
+
+.dropdown-item:hover {
+  background-color: #59016b;
+  color: white;
+}
+
+.form-check {
+  margin-bottom: 8px;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #59016b;
+}
