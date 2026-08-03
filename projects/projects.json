@@ -10,13 +10,13 @@
     }
   },
   {
-    "name": "PNG Jewellers",
+    "name": "Omnifood",
     "desc": "Developed a responsive static PNG Jewellers website using HTML, CSS, Bootstrap, and JavaScript, responsive layouts.",
-    "image": "notystackandroid",
+    "image": "image",
     "category": "basicweb",
     "links": {
-      "view": "./projects/PNG_Jewllary.html",
-      "code": "https://github.com/jigar-sable/notystack-android"
+      "view": ".projects/Omnifood.html",
+      "code": "https://portfolio-mainweb.netlify.app/"
     }
   },
   {
