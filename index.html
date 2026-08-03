@@ -299,41 +299,56 @@
   <!-- experience section ends -->
 
   <!-- contact section starts -->
-    <section class="contact" id="contact">
-    <h2 class="heading">
-      <i class="fas fa-headset"></i> Get in <span>Touch</span>
-    </h2>
+<section class="contact" id="contact">
+  <h2 class="heading">
+    <i class="fas fa-headset"></i> Get in <span>Touch</span>
+  </h2>
 
-   <!-- Added id="contact-form" right back here -->
-<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-   <input type="hidden" name="access_key" value="155f6a98-8432-42da-8e97-0cceab5949e1">
-  <div class="form-group">
-    <div class="field">
-      <input type="text" name="name" placeholder="Name" required />
-      <i class="fas fa-user"></i>
-    </div>
-    <div class="field">
-      <!-- CRITICAL FIX: Changed type="text" to type="email" -->
-      <input type="email" name="email" placeholder="Email" required />
-      <i class="fas fa-envelope"></i>
-    </div>
-    <div class="field">
-      <input type="text" name="phone" placeholder="Phone" />
-      <i class="fas fa-phone-alt"></i>
-    </div>
-    <div class="message">
-      <textarea placeholder="Message" name="message" required></textarea>
-      <i class="fas fa-comment-dots"></i>
+  <div class="container">
+    <div class="content">
+      <!-- Your side image stays here nicely -->
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="" />
+      </div>
+
+      <!-- Single, clean form with the proper ID and Web3Forms action -->
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="155f6a98-8432-42da-8e97-0cceab5949e1">
+        
+        <!-- Redirects the user back to your homepage after submission -->
+        <input type="hidden" name="redirect" value="https://netlify.app">
+
+        <div class="form-group">
+          <div class="field">
+            <input type="text" name="name" placeholder="Name" required />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="field">
+            <!-- Corrected email input validation -->
+            <input type="email" name="email" placeholder="Email" required />
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="field">
+            <input type="text" name="phone" placeholder="Phone" />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="message">
+            <textarea placeholder="Message" name="message" required></textarea>
+            <i class="fas fa-comment-dots"></i>
+          </div>
+        </div>
+        <div class="button-area">
+          <button type="submit">
+            Submit <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
+
     </div>
   </div>
-  <div class="button-area">
-    <button type="submit">
-      Submit <i class="fa fa-paper-plane"></i>
-    </button>
-  </div>
-</form>
+</section>
+<!-- contact section ends -->
 
-  <!-- contact section ends -->
 
   <!-- footer section starts -->
   <section class="footer">
