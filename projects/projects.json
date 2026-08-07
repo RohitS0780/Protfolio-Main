@@ -38,5 +38,15 @@
       "view": "#",
       "code": "https://github.com/RohitS0780/LaundryManagement"
     }
+  },
+  {
+    "name": "CarOnRent",
+    "desc": "A modern, high-performance car rental web application built using ReactJS with Vite and styled cleanly with Bootstrap.This template provides a minimal setup to get React working in Vite with HMR (Hot Module Replacement) and optimized build speeds.",
+    "image": "Home",
+    "category": "react",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/RohitS0780/CarOnRent"
+    }
   }
 ]
